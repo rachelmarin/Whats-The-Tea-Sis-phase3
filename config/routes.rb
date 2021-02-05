@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
 
   root(to: "static#home")
+  
+  
+  resources :recipes 
+  # resources :comments
+  
+  # resources :categories do
+    # resources :recipes
     
    
     get "/signup", to: "users#new", as: "signup"
