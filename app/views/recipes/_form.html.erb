@@ -1,0 +1,10 @@
+<%= form_for @recipe do |f| %>
+  <div class="center-align">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <h5 class="grey-text text-darken-2">Select Category</h5>
+  <div class="center-align">
+    <%= f.collection_select :category_id, Category.all, :id, :name, include_blank: "Select Category" %>
+  </div>
