@@ -25,7 +25,7 @@
   </div>
 
   <% end %>
-  
+
 <br><br>
     <h5 class="grey-text text-darken-2">Add Ingredients</h5>
       <div>
@@ -42,3 +42,20 @@
   </div>
     
     <br><br>
+
+    <h5 class="grey-text text-darken-2">Add Directions</h5>
+      <div>
+
+    <div id="Directions">
+      <%= f.fields_for :directions do |direction| %>
+        <%= render 'direction_fields', f: direction %>
+      <% end %>
+
+      <div class="links">
+        <%= link_to_add_association 'add direction', f, :directions %>
+      </div>
+    </div>
+  </div>
+    <br>
+
+  <%= f.submit button_name %>
